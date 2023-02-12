@@ -25,10 +25,12 @@ namespace Scripts
         {
             if(score > bestScore)
             {
-                score = bestScore;
+                bestScore = score;
                 PlayerPrefs.SetInt("BestScore", bestScore);
             }
+
             DeathUI.instance.gameObject.SetActive(true);
+            DeathUI.instance.Open();
         }
 
         public void AddPoints(int value)

@@ -17,12 +17,10 @@ namespace Scripts {
             instance = this;
             gameObject.SetActive(false);
         }
-
-        private void Start()
+        public void Open()
         {
             scoreTxt.text = "Score: " + GameManager.instance.score.ToString();
             bestScoreTxt.text = "Best Score: " + GameManager.instance.bestScore.ToString();
-
         }
 
         public void Respawn()
